@@ -2,7 +2,7 @@ localStorage.setItem("balls_amount",9);
 localStorage.setItem("time_lvl1",90);
 localStorage.setItem("time_lvl2",120);
 localStorage.setItem("time_lvl3",150);
-document.querySelector("#backgroundAudio").volume = 0.2;
+document.querySelector("#backgroundAudio").volume = 0.05;
 let getName_container = document.querySelector(".getName_container");
 window.addEventListener("load",()=>{
   getName_container.style.display="block";
@@ -36,8 +36,8 @@ submit_name=()=>{
 
 window.addEventListener("load",()=>{
   let name = localStorage.getItem("name");
-  if(name!="")
-    getName_container_hide();
+  if(name!=""){ //getName_container_hide();
+  }
 });
 
 
