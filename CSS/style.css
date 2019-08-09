@@ -53,10 +53,10 @@ body{
   height: 100vh;
 
   animation-name: getName_animate;
-  animation-duration: 1.5s
+  animation-duration: 2s
 }
 @-webkit-keyframes getName_animate {
-  from {top:-300px; opacity:0} 
+  from {top:-100vh; opacity:0} 
   to {top:0px; opacity:1}
 }
 
@@ -71,10 +71,27 @@ body{
   font-size: 0.8em;
   line-height: 200%;
   height: 30px;
-  width:30%;
+  width:60%;
+  box-shadow: 0px 8px 15px rgba(113, 150, 50, 0.5);
   background-color: #A6CB45;
 }
 .getName_form:focus{
+  position: relative;
+  background-color:  #A6CB45;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 1.2em;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.getName_form:hover{
   position: relative;
   background-color:  #A6CB45;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
