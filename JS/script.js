@@ -2,12 +2,11 @@ localStorage.setItem("balls_amount",9);
 localStorage.setItem("time_lvl1",90);
 localStorage.setItem("time_lvl2",120);
 localStorage.setItem("time_lvl3",150);
-
+document.querySelector("#backgroundAudio").volume = 0.05;
 let getName_container = document.querySelector(".getName_container");
 window.addEventListener("load",()=>{
   getName_container.style.display="block";
 });
-
 
 function getName_container_hide(){
   getName_container.style.display="none";
@@ -34,6 +33,12 @@ submit_name=()=>{
   localStorage.setItem("name",name_form[0].value);
   localStorage.setItem("age",name_form[1].value);
 }
+
+window.addEventListener("load",()=>{
+  let name = localStorage.getItem("name");
+  if(name!="")
+    getName_container_hide();
+});
 
 
 document.querySelector("#getName_button").addEventListener("click",submit_name);

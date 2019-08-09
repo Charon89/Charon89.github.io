@@ -16,6 +16,8 @@ let wrong_value = document.querySelector(".wrong_value");
 let view = document.querySelector(".playground");
 let timer = document.querySelector(".time_value");
 let pop_sound = document.querySelector("#pop_sound");
+let correct = document.querySelector("#correct");
+let incorrect = document.querySelector("#incorrect");
 
 let operand_1 = document.querySelector("#operand_1");
 let operand_2 = document.querySelector("#operand_2");
@@ -162,6 +164,12 @@ function animateDiv(myclass) {
 function playAudio() { 
   pop_sound.play(); 
 } 
+function correctPlay() { 
+  correct.play(); 
+} 
+function incorrectPlay() { 
+  incorrect.play(); 
+} 
 
 let if_end = setInterval(endCheck, 100);
   function endCheck() {
@@ -189,7 +197,7 @@ let if_end = setInterval(endCheck, 100);
             correct_value.innerHTML = parseInt(correct_value.innerHTML)+1;
             attemps_value.innerHTML = parseInt(attemps_value.innerHTML)-1;
             $(".newBalloon").remove();
-            playAudio();
+            correctPlay();
             respawn();
             randon_expession();
           }
@@ -199,7 +207,7 @@ let if_end = setInterval(endCheck, 100);
             attemps_value.innerHTML = parseInt(attemps_value.innerHTML)-1;
             wrong_value.innerHTML = parseInt(wrong_value.innerHTML)+1;
             $(this).remove();
-            playAudio();
+            incorrectPlay();
           }
         });
       }   
