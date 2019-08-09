@@ -2,7 +2,7 @@ localStorage.setItem("balls_amount",9);
 localStorage.setItem("time_lvl1",90);
 localStorage.setItem("time_lvl2",120);
 localStorage.setItem("time_lvl3",150);
-document.querySelector("#backgroundAudio").volume = 0.05;
+document.querySelector("#backgroundAudio").volume = 0.2;
 let getName_container = document.querySelector(".getName_container");
 window.addEventListener("load",()=>{
   getName_container.style.display="block";
