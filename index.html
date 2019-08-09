@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Math Game</title>
+	<link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Shojumaru&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="bg_grad_green">
+		<header id="head_name">
+			<a=h ref="index.html">
+				<h1>Math Game</h1>
+				</a>
+				<h5>Select level below to play</h5>
+				<!--<audio autoplay loop>
+				              <source src="MEDIA/index_audio.mp3" type="audio/mpeg">
+			              </audio>-->
+				<img id="fs_button" src="IMG/buttons/button_FullScreen.png">
+        </header>
+        <section class="getName_container">
+            <div class="getName_content">
+                <!--<span class="getName_close">&times;</span>-->
+                <h3 id="getName_header">Enter your name<br>and age</h3>
+                <form>
+                  <input type="text" class="getName_form" placeholder="Your Name"><br>
+                  <input type="text" class="getName_form" placeholder="Age"><br>
+                  <input type = "button" id="getName_button" value=" Go ">
+                </form>
+            </div>
+        </section>
+        <section class="buttons_container">
+
+            <div>
+                <a id="lvl1_link" href="#"><img id="lvl1" class="button_size_position" src="IMG/buttons/button_fuzzy_1_text.png"></a>
+                <p class="example_text">Example:<br> 8 + 3 = 11</p>
+            </div>
+
+            <div>
+                <a id="lvl1_link" href="#"><img id="lvl2" class="button_size_position" src="IMG/buttons/button_fuzzy_2_text.png"></a>
+                <p class="example_text">Example:<br> 8 - 3 = 5</p>
+            </div>
+
+            <div>
+                <a id="lvl1_link" href="#"><img id="lvl3" class="button_size_position" src="IMG/buttons/button_fuzzy_3_text.png"></a>
+                <p class="example_text">Example:<br> 8 / 2 = 4</p>
+            </div>
+        </section>
+
+        <section id="start_rules_container">
+            <div>
+                <a id="start" href="#"><img class="start_rules" src="IMG/buttons/start.png"></a>
+            </div>
+            <div>
+                <a href="HTML/rules.html"><img class="start_rules" src="IMG/buttons/rules.png"></a>
+            </div>
+        </section>
+
+
+
+        <script src="JS/script.js"></script>
+    </div>
+</body>
+
+</html>

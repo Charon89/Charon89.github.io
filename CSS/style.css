@@ -1,0 +1,337 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: yellow;
+}
+p{
+  font-size: 0.8em;
+}
+h5{
+  color: red;
+  margin-top: 3%;
+}
+body{
+  font-family: 'Shojumaru', cursive;
+  font-size: 1.5rem;
+}
+.bg_grad_green{
+  height: 100vh;
+  background-image: repeating-linear-gradient(rgb(84, 212, 88),rgba(97, 212, 101, 0.3));
+}
+#head_name{
+  position: relative;
+  text-align: center;
+  font-size: 2em;
+  color:yellow;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.getName_container{
+  position: fixed;
+  z-index: 1;
+  display:none;
+  
+  left: 0;
+  top: 0;  
+  width:100%;
+  height: auto;
+  
+}
+.getName_content{
+  position: relative;
+  background-color: rgba(113, 178, 56, 0.9);
+  box-shadow: 2px 2px 4px #000000;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+
+  animation-name: getName_animate;
+  animation-duration: 1.5s
+}
+@-webkit-keyframes getName_animate {
+  from {top:-300px; opacity:0} 
+  to {top:0px; opacity:1}
+}
+
+@keyframes getName_animate {
+  from {top:-300px; opacity:0}
+  to {top:0px; opacity:1}
+}
+.getName_form{
+  margin: 5px 0px;
+  text-align: center;
+  border: none;
+  font-size: 0.8em;
+  line-height: 200%;
+  height: 30px;
+  width:30%;
+  background-color: #A6CB45;
+}
+.getName_form:focus{
+  position: relative;
+  background-color:  #A6CB45;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 1.2em;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+#getName_button{
+  margin: 5px 0px;
+  position: relative;
+  background-color:  #A6CB45;
+  border: none;
+  font-size: 1em;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+#getName_button:hover{
+  position: relative;
+  background-color:  #A6CB45;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 1.2em;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.getName_close
+{
+  font-size: 1.5em;
+  float: right;
+}
+#getName_header{
+  padding: 3%;
+}
+
+
+
+#fs_button{
+  position: absolute;
+  top:0;
+  left:0;
+  width:10%;
+  max-width: 50px;
+  min-width: 10px;
+}
+
+.buttons_container
+{
+  text-align:center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.example_text
+{
+  font-size:1em;
+}
+
+.button_size_position{
+  width:100%;
+  height: auto;
+}
+
+#start_rules_container
+{
+  text-align: center;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  width:100%;
+}
+
+.start_rules{
+  max-width: 200px;
+width:50%;
+}
+.start_rules:hover{
+  background-color:rgba(205, 250, 5, 0.507);
+}
+
+#back{
+  position:absolute;
+  top:0;
+  left:0;
+}
+#rules_container{
+text-align:center;
+border: none;
+padding: 5px;
+width: 100vw;
+height:75%;
+overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+display:none;
+}
+
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 10px olivedrab;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: yellowgreen; 
+box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #7bac10;
+}
+
+
+/*TABLETS and SMARTS LANDSCAPE*/
+@media only screen and  (max-width : 1024px) and (orientation : landscape) {
+    a{
+  text-decoration: none;
+  color: black;
+}
+  #head_name{
+    text-align: center;
+    font-size: 1em;
+    color:black;
+    text-shadow: 2px 2px 4px #ffffff;
+  }
+  .button_size_position{
+  width:250px;
+  height: 100px;
+}
+  .example_text
+  {
+    text-align: center;
+   font-size:0.7em;
+  }
+}
+/*TABLETS and Monitors*/
+@media only screen and  (max-width : 1024px)  and (orientation : portrait) {
+    a{
+  text-decoration: none;
+  color: yellow;
+}
+  #head_name{
+    text-align: center;
+    font-size: 1.5em;
+    color:red;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .button_size_position{
+  width:50%;
+  height: auto;
+}
+
+  .button_size_position{
+  width:100%;
+  height: auto;
+  }
+  .buttons_container{
+  display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+}
+
+/*SMARTPHONES*/
+@media only screen and (max-width: 412px) and (orientation : portrait)
+{
+  #rules_container{
+text-align:center;
+border: solid;
+padding: 5px;
+width: 100vw;
+height:80%;
+overflow: scroll;
+}
+  a{
+  text-decoration: none;
+  color: white;
+}
+  body{width:100vw;}
+  #head_name{
+    text-align: center;
+    font-size: 0.7em;
+    color:white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+.example_text
+{
+  text-align: center;
+  font-size:0.7em;
+}
+  .button_size_position{
+  width:100%;
+  height: auto;
+  }
+  .buttons_container{
+  display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+.buttons_container div{
+text-align: left;
+}
+}
+
+
+
+
+
+
+
+
+
+/*@media screen and (orientation: portrait) {
+  #toolbar {
+    width: 100%;
+  }
+}
+
+// For landscape, we want the tool bar stick on the left 
+
+@media screen and (orientation: landscape) {
+  #toolbar {
+    position: fixed;
+    width: 2.65em;
+    height: 100%;
+  }
+
+  p {
+    margin-left: 2em;
+  }
+
+  li + li {
+    margin-top: .5em;
+  }
+}*/

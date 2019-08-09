@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Math Game. Level 1</title>
+    <link href="../CSS/lvl_css.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Shojumaru&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="bg_grad_green">
+    <header id="head_name">
+    <a = href="../index.html"><h1>Level 1</h1></a>
+    <!--<audio autoplay loop>
+      <source src="MEDIA/index_audio.mp3" type="audio/mpeg">
+    </audio>-->
+    <audio id="pop_sound">
+      <source src="../MEDIA/balonexplose.wav" type="audio/mpeg">
+    </audio>
+    <img id="fs_button" src="../IMG/buttons/button_FullScreen.png">
+    </header>
+    <div class = "playground">
+    </div> <!--playground-->
+
+    <div class="score_container">
+      <p>Clicks: </p><p class="score_value">0</p><br>
+      <p>Attemps: </p><p class="attemps_value">0</p><br>
+      <p>Correct hits: </p><p class="correct_value">0</p><br>
+      <p>Wrong hits: </p><p class="wrong_value">0</p><br>
+      <p>Time left: </p><p class="time_value">0</p><br>
+      <div id="next_lvl"><a href="lvl2.html"><h3 >Go To The Next Level</h3></a></div>
+    </div> <!--score_container-->
+
+  <div class="curson_container">
+    <p id = "operand_1">0</p><p>&nbsp;+&nbsp;</p><p id = "operand_2">1</p>
+  </div><!--curson_container-->
+
+    </div> <!--bg_grad_green-->
+    <!--<a href="https://www.freepik.com/free-photos-vectors/birthday">Birthday vector created by vectorpocket - www.freepik.com</a>-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="../JS/lvl.js"></script>
+  </body>
+</html>
