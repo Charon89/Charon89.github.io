@@ -69,7 +69,7 @@ setDifficulty=()=>{
         localStorage.setItem("settings",JSON.stringify(settings));
         break;
     case "Hard":
-        settings.SET(20,50,70,80,3,2300);
+        settings.SET(20,50,70,80,3,2500);
         localStorage.setItem("settings",JSON.stringify(settings));
         break;
     case "Extreme":
