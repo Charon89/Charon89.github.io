@@ -16,9 +16,9 @@
 				<h1>Math Game</h1>
 				</a>
 				<h5>Select level below to play</h5>
-				<audio autoplay loop id="backgroundAudio">
+				<!--<audio autoplay loop id="backgroundAudio">
 				    <source src="MEDIA/index_audio.mp3" type="audio/mpeg">
-			    </audio>
+			    </audio>-->
 				<img id="fs_button" src="IMG/buttons/button_FullScreen.png">
         </header>
         <section class="getName_container">
@@ -28,6 +28,13 @@
                 <form>
                   <input type="text" class="getName_form" placeholder="Your Name"><br>
                   <input type="text" class="getName_form" placeholder="Age"><br>
+                <select id="drop">
+                    <option required value="Select difficulty">Select difficulty</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Hard">Hard</option>
+                    <option value="Extreme">Extreme</option>
+                </select><br>
                   <input type = "button" id="getName_button" value=" Go ">
                 </form>
             </div>

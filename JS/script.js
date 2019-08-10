@@ -1,37 +1,18 @@
-localStorage.setItem("balls_amount",9);
-localStorage.setItem("time_lvl1",90);
-localStorage.setItem("time_lvl2",120);
-localStorage.setItem("time_lvl3",150);
-document.querySelector("#backgroundAudio").volume = 0.05;
+//document.querySelector("#backgroundAudio").volume = 0.05;
+
 let getName_container = document.querySelector(".getName_container");
+let lvl1 = document.querySelector("#lvl1"); //img
+let lvl2 = document.querySelector("#lvl2"); //img
+let lvl3 = document.querySelector("#lvl3"); //img
+let start = document.querySelector("#start");
+let lvl_status = 0;
+
 window.addEventListener("load",()=>{
   getName_container.style.display="block";
 });
 
-function getName_container_hide(){
+getName_container_hide=()=>{
   getName_container.style.display="none";
-}
-
-//fetch_name.addEventListener("click", getName_container_hide);
-submit_name=()=>{
-  let good = false;
-  let name_form = document.getElementsByClassName("getName_form");  
-
-  
-  let age = parseInt(name_form[1].value);
-  let name = name_form[0].value;
-
-      if((age < 50 && age > 3) && (age !="") && name.length > 2)
-      {
-        getName_container_hide();
-      }
-      else{
-        //alert("age: "+age + "Name length: "+ name.length);
-        alert("Invalid entry");
-      }
-
-  localStorage.setItem("name",name_form[0].value);
-  localStorage.setItem("age",name_form[1].value);
 }
 
 window.addEventListener("load",()=>{
@@ -40,8 +21,67 @@ window.addEventListener("load",()=>{
   }
 });
 
+document.querySelector("#getName_button").addEventListener("click",()=>{
+  let name_form = document.getElementsByClassName("getName_form");  
+  let age = parseInt(name_form[1].value);
+  let name = name_form[0].value;
+  let difficulty = document.querySelector("#drop");
+      if((age < 50 && age > 3) && (age !="") && name.length > 2 && difficulty.value !="Select difficulty")
+      {
+        getName_container_hide();
+        setDifficulty();
+        //localStorage.setItem("difficulty",difficulty.value);
+      }
+      else{
+        alert("Invalid entry");
+      }
+  localStorage.setItem("name",name_form[0].value);
+  localStorage.setItem("age",name_form[1].value);
+});
 
-document.querySelector("#getName_button").addEventListener("click",submit_name);
+setDifficulty=()=>{
+
+  let difficulty = document.querySelector("#drop");
+  var settings = {
+                  balls_amount: 9,
+                  time_lvl1: 90,
+                  time_lvl2: 120,
+                  time_lvl3: 150,
+                  attemps: 5,
+                  speed: 3000,
+    SET: function(balls_amount, time_lvl1, time_lvl2, time_lvl3, attemps, speed){
+      this.balls_amount = balls_amount;
+      this.time_lvl1 = time_lvl1;
+      this.time_lvl2 = time_lvl2;
+      this.time_lvl3 = time_lvl3;
+      this.attemps = attemps;
+      this.speed = speed;
+    }
+  };
+  
+  switch(difficulty.value){
+    case "Easy":
+        settings.SET(5,120,150,180,10,4000);
+        localStorage.setItem("settings",JSON.stringify(settings));
+        break;
+    case "Normal":
+        settings.SET(9,90,120,150,7,3000);
+        localStorage.setItem("settings",JSON.stringify(settings));
+        break;
+    case "Hard":
+        settings.SET(20,50,70,80,3,2300);
+        localStorage.setItem("settings",JSON.stringify(settings));
+        break;
+    case "Extreme":
+        settings.SET(50,50,70,80,10,1500);
+        localStorage.setItem("settings",JSON.stringify(settings));
+        break;
+    default:
+        settings.SET(9,90,120,150,7,3000);
+        localStorage.setItem("settings",JSON.stringify(settings));
+        break;
+  }
+}
 
 //CREATED BY MOZILLA ---- FULLSCREEN MODE
 let fs_status = 0;
@@ -61,21 +101,11 @@ function toggleFullScreen() {
   else {
     cancelFullScreen.call(doc);
     fs.src = "IMG/buttons/button_FullScreen_pressed.png";
-
   }
 }
 fs.addEventListener("click", toggleFullScreen);
 
-
 //Select lvl************
-let lvl_status = 0;
-
-let lvl1 = document.querySelector("#lvl1"); //img
-let lvl2 = document.querySelector("#lvl2"); //img
-let lvl3 = document.querySelector("#lvl3"); //img
-
-let start = document.querySelector("#start");
-
 lvl1.addEventListener("click", () => lvl_status = 1);
 lvl2.addEventListener("click", () => lvl_status = 2);
 lvl3.addEventListener("click", () => lvl_status = 3);
@@ -107,5 +137,3 @@ function change_button() {
 lvl1.addEventListener("click", change_button);
 lvl2.addEventListener("click", change_button);
 lvl3.addEventListener("click", change_button);
-
-//Start****************
