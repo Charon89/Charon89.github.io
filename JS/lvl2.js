@@ -76,7 +76,6 @@ class balloon {
     newDiv.style.position = "absolute";
     newDiv.style.top = 300+'px';
     newDiv.style.left = -300+'px';
-    //alert("H: " + newpos[0] + " W: " + newpos[1] );
 
     newImg.src = this.img_source;
     newImg.style.position = "relative";
@@ -97,7 +96,6 @@ class balloon {
     let pRandomValue = random;
     let changeP = document.querySelector('.newParagraph');
     changeP.innerHTML = pRandomValue;
-   // alert(this.p_value);
   }
   getValue(){
     return this.p_value;
@@ -119,9 +117,7 @@ function randon_expession() {
   $('.newBalloon').innerHTML = parseInt(operand_1.innerHTML) - parseInt(operand_2.innerHTML);
   expression_result = parseInt(operand_1.innerHTML) - parseInt(operand_2.innerHTML);
   document.querySelector(".newParagraph").innerHTML = expression_result;
-  //document.querySelector(".newParagraph").style.color = "red";
 }
-//window.addEventListener("load",randon_expession);
 
 
 var ball = [];
@@ -138,7 +134,6 @@ for (let i = 0; i < balls_amount; i++) {
   ball[i].create();
   $('.newBalloon').innerHTML = parseInt(operand_1.innerHTML) - parseInt(operand_2.innerHTML);
   document.querySelector(".newParagraph").innerHTML = expression_result;
-  //document.querySelector(".newParagraph").style.color = "red";
 }
 
 //---- Balloons move
@@ -185,12 +180,6 @@ let if_end = setInterval(endCheck, 100);
   }
   window.addEventListener("load",endCheck);
 
-//   $(document).on('click', '.playground', function(){ 
-//     $(document).on('click', '.newBalloon', function(){ 
-//         alert($(this).find('.newParagraph').text());
-//     });       
-// });
-  
  function balloonDoAction(){
      var x = $(".newBalloon");
        for (var j = 0; j < x.length; j++) {
@@ -219,10 +208,8 @@ let if_end = setInterval(endCheck, 100);
       }   
   }
   $('.playground').on("click", "div.newBalloon", balloonDoAction);
-//document.querySelector(".newBalloon").addEventListener("click", balloonDoAction);
   
   function respawn() {
-   // alert(popped);
       ball = [];
       for (let i = 0; i < balls_amount; i++) {
       let rend_p = makeNewPosition();
@@ -230,14 +217,10 @@ let if_end = setInterval(endCheck, 100);
       ball[i].create();
     }
   }
-
-
 //Score-Attemps-Hits
-
 function endLevel(){
   clearInterval(int);
   clearInterval(if_end);
-  //timer.innerHTML = "Time is up!";
       score_container.style.padding = "10%";
       score_container.style.paddingTop = "0px";
       score_container.style.textAlign = "center";
@@ -266,11 +249,10 @@ function myTimer() {
       timer.innerHTML = "Time is up!";
       save();
       endLevel();
-      //clearInterval(myTimer);
     }
 }
-window.addEventListener("load", myTimer);
 
+window.addEventListener("load", myTimer);
 var result_lvl2 = {
   attemps: 0,
   correct: 0,

@@ -38,8 +38,9 @@
   {
     overflow: scroll;
     text-align: center;
-    margin: 3%;
-    padding: 3%;   
+    margin: 0 3%;
+    padding: 3%; 
+    padding-top:0;  
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     background-color:rgba(201, 185, 98, 0.5);

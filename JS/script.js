@@ -1,5 +1,5 @@
 //document.querySelector("#backgroundAudio").volume = 0.05;
-
+//localStorage.clear();
 let getName_container = document.querySelector(".getName_container");
 let lvl1 = document.querySelector("#lvl1"); //img
 let lvl2 = document.querySelector("#lvl2"); //img
@@ -15,9 +15,18 @@ getName_container_hide=()=>{
   getName_container.style.display="none";
 }
 
+isEmpty=(obj)=> {
+  for(var key in obj) {
+      if(obj.hasOwnProperty(key))
+          return false;
+  }
+  return true;
+}
+
 window.addEventListener("load",()=>{
   let name = localStorage.getItem("name");
-  if(name!=""){ //getName_container_hide();
+  let age = localStorage.getItem("age");
+  if(!isEmpty(name) && !isEmpty(age)){ getName_container_hide();
   }
 });
 
@@ -30,7 +39,6 @@ document.querySelector("#getName_button").addEventListener("click",()=>{
       {
         getName_container_hide();
         setDifficulty();
-        //localStorage.setItem("difficulty",difficulty.value);
       }
       else{
         alert("Invalid entry");
@@ -40,7 +48,6 @@ document.querySelector("#getName_button").addEventListener("click",()=>{
 });
 
 setDifficulty=()=>{
-
   let difficulty = document.querySelector("#drop");
   var settings = {
                   balls_amount: 9,

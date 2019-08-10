@@ -118,10 +118,7 @@ function randon_expession() {
   $('.newBalloon').innerHTML = parseInt(operand_1.innerHTML) + parseInt(operand_2.innerHTML);
   expression_result = parseInt(operand_1.innerHTML) + parseInt(operand_2.innerHTML);
   document.querySelector(".newParagraph").innerHTML = expression_result;
-  //document.querySelector(".newParagraph").style.color = "red";
 }
-//window.addEventListener("load",randon_expession);
-
 
 var ball = [];
 operand_1.innerHTML = Math.floor(Math.random() * 25 + 1);
@@ -135,7 +132,6 @@ for (let i = 0; i < balls_amount; i++) {
   ball[i].create();
   $('.newBalloon').innerHTML = parseInt(operand_1.innerHTML) + parseInt(operand_2.innerHTML);
   document.querySelector(".newParagraph").innerHTML = expression_result;
-  //document.querySelector(".newParagraph").style.color = "red";
 }
 
 //---- Balloons move
@@ -149,7 +145,6 @@ function makeNewPosition() {
   let h_head = document.querySelector("#head_name").offsetHeight;
   let nh = Math.floor(Math.random() * (h - h_head));
   let nw = Math.floor(Math.random() * w);
-
   return [nh, nw];
 }
 
@@ -181,12 +176,6 @@ let if_end = setInterval(endCheck, 100);
       }
   }
   window.addEventListener("load",endCheck);
-
-//   $(document).on('click', '.playground', function(){ 
-//     $(document).on('click', '.newBalloon', function(){ 
-//         alert($(this).find('.newParagraph').text());
-//     });       
-// });
   
  function balloonDoAction(){
      var x = $(".newBalloon");
@@ -216,7 +205,6 @@ let if_end = setInterval(endCheck, 100);
       }   
   }
   $('.playground').on("click", "div.newBalloon", balloonDoAction);
-//document.querySelector(".newBalloon").addEventListener("click", balloonDoAction);
   
   function respawn() {
    // alert(popped);
@@ -227,14 +215,11 @@ let if_end = setInterval(endCheck, 100);
       ball[i].create();
     }
   }
-
-
 //Score-Attemps-Hits
 
 function endLevel(){
   clearInterval(int);
   clearInterval(if_end);
-  //timer.innerHTML = "Time is up!";
       score_container.style.padding = "10%";
       score_container.style.paddingTop = "0px";
       score_container.style.textAlign = "center";
@@ -243,7 +228,6 @@ function endLevel(){
       view.style.display = "none";
       let next = document.querySelector("#next_lvl");
       next.style.display = "inline";
-
 }
 
 //MOUSE COORDS
@@ -264,7 +248,6 @@ function myTimer() {
       timer.innerHTML = "Time is up!";
       save();
       endLevel();
-      //clearInterval(myTimer);
     }
 }
 window.addEventListener("load", myTimer);
