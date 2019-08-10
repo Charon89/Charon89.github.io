@@ -221,6 +221,7 @@ let if_end = setInterval(endCheck, 100);
 function endLevel(){
   clearInterval(int);
   clearInterval(if_end);
+  curson_container.style.display="none";
       score_container.style.padding = "10%";
       score_container.style.paddingTop = "0px";
       score_container.style.textAlign = "center";
@@ -268,6 +269,10 @@ SET: function(attemps, correct, wrong, time_spent, time_left){
 }
 }
 save=()=>{
-  result_lvl2.SET(settings.attemps, correct_value.innerHTML, wrong_value.innerHTML, parseInt(settings.time_lvl2)-parseInt(timer.innerHTML), parseInt(timer.innerHTML));
+  if(timer.innerHTML=="Time is up!"){
+    result_lvl2.SET(settings.attemps, correct_value.innerHTML, wrong_value.innerHTML, parseInt(settings.time_lvl2), 0);
+}
+else
+    result_lvl2.SET(settings.attemps, correct_value.innerHTML, wrong_value.innerHTML, parseInt(settings.time_lvl2)-parseInt(timer.innerHTML), parseInt(timer.innerHTML));
   localStorage.setItem("result_lvl2",JSON.stringify(result_lvl2));
 }

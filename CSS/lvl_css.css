@@ -40,67 +40,7 @@ a{
   height:100px;
 
 }
-.ball_1{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
 
-}
-.ball_2{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_2{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_3{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_4{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_5{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_6{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_7{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_8{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
-.ball_9{
-  position:absolute;
-  max-width:100px;
-  top:-200;
-  left:-200;
-}
 div > img{
   position:absolute;
 
@@ -186,6 +126,13 @@ box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 background: #7bac10;
 }
 
+
+.newBalloon{
+  -webkit-user-select: none;
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+}
 
 /*TABLETS and SMARTS LANDSCAPE*/
 @media only screen and  (max-width : 1024px) and (orientation : landscape) {
