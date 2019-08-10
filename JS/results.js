@@ -95,6 +95,8 @@ else
 else
     result_box[2].style.display = "none";
 
+    document.querySelector(".clear").addEventListener("click",()=>localStorage.clear());
+
 
 
 

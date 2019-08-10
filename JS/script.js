@@ -72,11 +72,11 @@ setDifficulty=()=>{
         localStorage.setItem("settings",JSON.stringify(settings));
         break;
     case "Normal":
-        settings.SET(9,90,120,150,7,3000);
+        settings.SET(9,90,120,150,10,3000);
         localStorage.setItem("settings",JSON.stringify(settings));
         break;
     case "Hard":
-        settings.SET(20,50,70,80,3,2500);
+        settings.SET(20,50,70,80,10,2300);
         localStorage.setItem("settings",JSON.stringify(settings));
         break;
     case "Extreme":
@@ -84,7 +84,7 @@ setDifficulty=()=>{
         localStorage.setItem("settings",JSON.stringify(settings));
         break;
     default:
-        settings.SET(9,90,120,150,7,3000);
+        settings.SET(9,90,120,150,10,3000);
         localStorage.setItem("settings",JSON.stringify(settings));
         break;
   }
