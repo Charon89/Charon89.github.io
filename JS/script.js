@@ -17,7 +17,7 @@ getName_container_hide=()=>{
 
 window.addEventListener("load",()=>{
   let name = localStorage.getItem("name");
-  if(name!=""){ //getName_container_hide();
+  if(name!=""){ getName_container_hide();
   }
 });
 

@@ -176,6 +176,7 @@ function incorrectPlay() {
 let if_end = setInterval(endCheck, 100);
   function endCheck() {
       if(parseInt(attemps_value.innerHTML) == 0){
+        save();
         endLevel();
       }
   }
@@ -242,6 +243,7 @@ function endLevel(){
       view.style.display = "none";
       let next = document.querySelector("#next_lvl");
       next.style.display = "inline";
+
 }
 
 //MOUSE COORDS
@@ -259,12 +261,29 @@ function myTimer() {
     if (time < 10)
       timer.style.color = "red";
     if (time <= 0) {
+      timer.innerHTML = "Time is up!";
+      save();
       endLevel();
       //clearInterval(myTimer);
     }
 }
-
-//On load events
-
-
 window.addEventListener("load", myTimer);
+
+var result_lvl1 = {
+  attemps: 0,
+  correct: 0,
+  wrong: 0,
+  time_spent: 0,
+  time_left: 0,
+SET: function(attemps, correct, wrong, time_spent, time_left){
+  this.attemps = attemps;
+  this.correct = correct;
+  this.wrong = wrong;
+  this.time_spent = time_spent;
+  this.time_left = time_left;
+}
+}
+save=()=>{
+  result_lvl1.SET(settings.attemps, correct_value.innerHTML, wrong_value.innerHTML, parseInt(settings.time_lvl1)-parseInt(timer.innerHTML), parseInt(timer.innerHTML));
+  localStorage.setItem("result_lvl1",JSON.stringify(result_lvl1));
+}
