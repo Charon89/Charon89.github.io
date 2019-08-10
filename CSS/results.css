@@ -96,6 +96,9 @@
     font-size:0.8em;
     line-height: 0px;
   }
+  .name_box p{
+    font-size: 10px;
+  }
 }
   /*TABLETS and Monitors*/
   @media only screen and  (max-width : 1024px)  and (orientation : portrait) {
@@ -143,5 +146,8 @@
     margin: 5px;
     padding: 10px;
     text-decoration: underline;
+  }
+  .name_box p{
+    font-size: 0.8em;
   }
   }
